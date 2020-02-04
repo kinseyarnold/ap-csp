@@ -1,0 +1,64 @@
+function start(){
+    var games = [
+        {
+            game: 'Hockey',
+            opponent: 12,
+            player: 15
+        }, {
+            game: 'Soccer',
+            opponent: 26,
+            player: 23
+        }, {
+            game: 'Basketball',
+            opponent: 15,
+            player: 19
+        }, {
+            game: 'Volleyball',
+            opponent: 36,
+            player: 28
+        }, {
+            game: 'Tennis',
+            opponent: 12,
+            player: 32
+        }, {
+            game: 'Softball',
+            opponent: 9,
+            player: 12
+        }, {
+            game: 'Football',
+            opponent: 19,
+            player: 24
+        }, {
+            game: 'Dance',
+            opponent: 20,
+            player: 18
+        }, {
+            game: 'Badminton',
+            opponent: 6,
+            player: 11
+        }, {
+            game: 'Foosball',
+            opponent: 9,
+            player: 4
+        }
+    ];
+    
+    tracker(games);
+}
+
+function tracker(games){
+    var winTracker = 0;
+    var lossTracker = 0;
+    
+    for(var i = 0; i < games.length; i++){
+     
+        if(games[i].opponent < games[i].player){
+            winTracker+=1;
+        }else{
+            lossTracker+=1;
+        }
+    }
+    
+    println('Wins: ' + winTracker);
+    println('Losses: ' + lossTracker);
+}
